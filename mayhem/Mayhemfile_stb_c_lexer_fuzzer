@@ -1,0 +1,9 @@
+project: savantenvs/stb
+target: stb_c_lexer_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/stb_c_lexer_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/stb_c_lexer_fuzzer
+    libfuzzer: true
+    timeout: 5
