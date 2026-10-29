@@ -1,0 +1,18 @@
+# Effective ignore for `docker build -f mayhem/Dockerfile` (BuildKit prefers this over a root .dockerignore).
+# .git is deliberately NOT excluded: the image carries the full history of the `mayhem` branch.
+# Only untracked build products and run scratch are pruned; every tracked file stays, so the image's
+# tree is exactly the checkout.
+**/*.o
+**/*.obj
+**/*.exe
+/stb_c_lexer_fuzzer
+/stb_c_lexer_fuzzer-standalone
+/stb_png_read_fuzzer
+/stb_png_read_fuzzer-standalone
+/stbi_read_fuzzer
+/stbi_read_fuzzer-standalone
+/stb_png_regress_check
+/stb_ds_unit_tests
+/ctrf-report.json
+/.crashers
+/.inputs
