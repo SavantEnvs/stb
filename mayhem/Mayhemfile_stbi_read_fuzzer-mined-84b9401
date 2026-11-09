@@ -1,0 +1,11 @@
+project: savantenvs/stb
+# seed-from: https://app.mayhem.security/savantenvs/stb/stbi-read-fuzzer
+target: stbi_read_fuzzer-mined-84b9401
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/stbi_read_fuzzer-mined-84b9401/testsuite
+cmds:
+  - cmd: /mayhem/stbi_read_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/tests/stb_png.dict
+    timeout: 5
